@@ -46,9 +46,9 @@ document.getElementById("form").addEventListener("submit", function (event) {
   if (name === "") {
     callerror1();
     return;
-  } else if (email === "" || !email.match(emailFormat)) {
+  } else if (email === "" && !email.match(emailFormat)) {
     callerror2();
-    return;
+    return false;
   } else if (dob === "") {
     callerror3();
     return;
